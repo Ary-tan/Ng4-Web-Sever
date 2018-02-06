@@ -5,13 +5,15 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {NgZorroAntdModule} from 'ng-zorro-antd';
 import {AppComponent} from './app.component';
-import {HeaderComponent} from './common/header/header.component';
+import {HeaderComponent} from './components/header/header.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 
 @NgModule({
     declarations: [
         AppComponent,
-        HeaderComponent
+        HeaderComponent,
+        BannerComponent
     ],
     imports: [
         BrowserModule,

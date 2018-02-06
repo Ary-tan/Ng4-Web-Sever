@@ -1,0 +1,39 @@
+@size14: 14px;
+.header {
+    width: 1140px;
+    margin: 0 auto;
+    background: white;
+    display: flex;
+    align-items: center;
+    .logo {
+        width: 40%;
+        p {
+            font-size: 35px;
+        }
+        span {
+            font-size: @size14;
+            color: #999;
+        }
+    }
+    .header-nav {
+        width: 60%;
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: @size14;
+            li {
+                padding: 30px 37px;
+                cursor: pointer;
+                border-right: 1px solid #efeaea;
+                &:hover {
+                    color: #999;
+                    transition: all .2s linear;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+    }
+}
