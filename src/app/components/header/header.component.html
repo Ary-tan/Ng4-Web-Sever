@@ -5,11 +5,9 @@
     </div>
     <nav class="header-nav">
         <ul>
-            <li routerLink="">首页</li>
-            <li routerLink="server">服务</li>
-            <li>项目</li>
-            <li>关于</li>
-            <li>配置说明</li>
+            <li *ngFor="let item of nav" (click)="openPath(item)">
+                {{item.name}}
+            </li>
         </ul>
     </nav>
 </div>

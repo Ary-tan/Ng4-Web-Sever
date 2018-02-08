@@ -41,6 +41,7 @@ const appRoutes: Routes = [
         ),
         NgZorroAntdModule.forRoot()
     ],
+    exports: [RouterModule],
     bootstrap: [AppComponent]
 })
 export class AppModule {
