@@ -1,4 +1,8 @@
 .header {
+    .bg-nav {
+        background: #2e3842!important;
+        transition:all .3s linear;
+    }
     .menu-btn {
         transition: background-color 0.2s ease;
         background: transparent;
@@ -11,31 +15,32 @@
         z-index: 10000;
         font-size: 14px;
         color: white;
-        text-align: right;
+        padding: 0 21px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         .menuToggle {
             border: 0;
             color: #fff;
             display: inline-block;
-            padding: 0 21px;
+            padding: 0 0 0 21px;
             text-transform: uppercase;
             cursor: pointer;
-        }
-        .menuToggle:after {
-            background-image: url("../../../assets/bars.svg");
-            background-position: right center;
-            background-repeat: no-repeat;
-            content: '';
-            display: inline-block;
-            height: 3.75em;
-            vertical-align: top;
-            width: 2em;
+            .icon {
+                margin-left: 10px;
+                font-size: 16px;
+                position: relative;
+                top: 1px;
+            }
         }
     }
 }
+
 .nav-show {
     transform: translateX(0) !important;
-    transition: transform 0.5s ease!important;
+    transition: transform 0.5s ease !important;
 }
+
 .header-nav {
     transform: translateX(346px);
     transition: transform 0.5s ease;
@@ -52,18 +57,15 @@
     width: 346px;
     z-index: 10002;
     .close {
-        background-image: url("../../../assets/close.svg");
-        background-position: 4.85em 1em;
-        background-repeat: no-repeat;
         border: 0;
         cursor: pointer;
         display: block;
-        height: 3em;
         position: absolute;
         right: 0;
         top: 0;
         vertical-align: middle;
-        width: 7em;
+        width: 40px;
+        font-size: 25px;
     }
     .nav {
         font-size: 14px;
@@ -83,4 +85,13 @@
             }
         }
     }
+}
+
+.shade {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(75, 75, 75, 0.58);
+    z-index: 999;
+    transition:background-color 0.2s ease;
 }

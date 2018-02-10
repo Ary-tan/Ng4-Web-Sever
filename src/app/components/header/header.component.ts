@@ -30,6 +30,7 @@ export class HeaderComponent implements OnInit {
         }
     ];
     navShow = false;
+    logo = true;
 
     constructor(private router: Router) {
     }
@@ -47,6 +48,10 @@ export class HeaderComponent implements OnInit {
     }
 
     closeMenu() {
+        this.navShow = false;
+    }
+
+    closeShade() {
         this.navShow = false;
     }
 }

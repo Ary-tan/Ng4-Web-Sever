@@ -1,13 +1,17 @@
 <div class="header">
-    <div class="menu-btn">
-        <span class="menuToggle" (click)="openMenu()">菜单</span>
+    <div class="menu-btn" [ngClass]="{'bg-nav': logo}">
+        <span>ARY-TAN</span>
+        <span class="menuToggle" (click)="openMenu()">菜单
+            <i class="icon anticon anticon-menu-fold"></i>
+        </span>
     </div>
     <nav class="header-nav" [ngClass]="{'nav-show': navShow}">
-        <div class="close" (click)="closeMenu()"></div>
+        <div class="close" (click)="closeMenu()"><i class="anticon anticon-close"></i></div>
         <ul class="nav">
             <li *ngFor="let item of nav" (click)="openPath(item)">
                 {{item.name}}
             </li>
         </ul>
     </nav>
+    <section class="shade" *ngIf="navShow" (click)="closeShade()"></section>
 </div>
