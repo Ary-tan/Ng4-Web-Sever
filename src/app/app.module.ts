@@ -7,14 +7,14 @@ import {HttpClientModule} from '@angular/common/http';
 import {NgZorroAntdModule} from 'ng-zorro-antd';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './components/header/header.component';
-import {BannerComponent} from './components/banner/banner.component';
+import {HomeComponent} from './components/home/home.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {ServerComponent} from './components/server/server.component';
 
 const appRoutes: Routes = [
     {
         path: '',
-        component: BannerComponent,
+        component: HomeComponent,
     },
     {
         path: 'server',
@@ -27,7 +27,7 @@ const appRoutes: Routes = [
         AppComponent,
         HeaderComponent,
         FooterComponent,
-        BannerComponent,
+        HomeComponent,
         ServerComponent
     ],
     imports: [

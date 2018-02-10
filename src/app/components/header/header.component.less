@@ -1,38 +1,85 @@
-@size14: 14px;
 .header {
-    width: 1140px;
-    margin: 0 auto;
-    background: white;
-    display: flex;
-    align-items: center;
-    .logo {
-        width: 40%;
-        p {
-            font-size: 35px;
+    .menu-btn {
+        transition: background-color 0.2s ease;
+        background: transparent;
+        height: 52px;
+        left: 0;
+        line-height: 52px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10000;
+        font-size: 14px;
+        color: white;
+        text-align: right;
+        .menuToggle {
+            border: 0;
+            color: #fff;
+            display: inline-block;
+            padding: 0 21px;
+            text-transform: uppercase;
+            cursor: pointer;
         }
-        span {
-            font-size: @size14;
-            color: #999;
+        .menuToggle:after {
+            background-image: url("../../../assets/bars.svg");
+            background-position: right center;
+            background-repeat: no-repeat;
+            content: '';
+            display: inline-block;
+            height: 3.75em;
+            vertical-align: top;
+            width: 2em;
         }
     }
-    .header-nav {
-        width: 60%;
-        ul {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            font-size: @size14;
-            li {
-                padding: 30px 37px;
-                cursor: pointer;
-                border-right: 1px solid #efeaea;
-                &:hover {
-                    color: #999;
-                    transition: all .2s linear;
-                }
-                &:last-child {
-                    border-right: none;
-                }
+}
+.nav-show {
+    transform: translateX(0) !important;
+    transition: transform 0.5s ease!important;
+}
+.header-nav {
+    transform: translateX(346px);
+    transition: transform 0.5s ease;
+    -webkit-overflow-scrolling: touch;
+    background: #21b2a6;
+    color: #ffffff;
+    height: 100%;
+    max-width: 80%;
+    overflow-y: auto;
+    padding: 52px 34px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 346px;
+    z-index: 10002;
+    .close {
+        background-image: url("../../../assets/close.svg");
+        background-position: 4.85em 1em;
+        background-repeat: no-repeat;
+        border: 0;
+        cursor: pointer;
+        display: block;
+        height: 3em;
+        position: absolute;
+        right: 0;
+        top: 0;
+        vertical-align: middle;
+        width: 7em;
+    }
+    .nav {
+        font-size: 14px;
+        li {
+            margin: 8.5px 0 0 0;
+            padding: 8.5px 0 0 0;
+            border-top: solid 1px rgba(0, 0, 0, 0.125);
+            cursor: pointer;
+            &:first-child {
+                border-top: 0 !important;
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+            }
+            &:hover {
+                color: #e8e8e8;
+                transition: all .2s linear;
             }
         }
     }

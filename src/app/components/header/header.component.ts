@@ -29,6 +29,7 @@ export class HeaderComponent implements OnInit {
             name: '配置说明'
         }
     ];
+    navShow = false;
 
     constructor(private router: Router) {
     }
@@ -38,5 +39,14 @@ export class HeaderComponent implements OnInit {
 
     openPath(nav) {
         this.router.navigate([nav.path]);
+        this.navShow = false;
+    }
+
+    openMenu() {
+        this.navShow = true;
+    }
+
+    closeMenu() {
+        this.navShow = false;
     }
 }

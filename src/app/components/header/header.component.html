@@ -1,10 +1,10 @@
 <div class="header">
-    <div class="logo">
-        <p>Obdurate</p>
-        <span>We are professional in our service</span>
+    <div class="menu-btn">
+        <span class="menuToggle" (click)="openMenu()">菜单</span>
     </div>
-    <nav class="header-nav">
-        <ul>
+    <nav class="header-nav" [ngClass]="{'nav-show': navShow}">
+        <div class="close" (click)="closeMenu()"></div>
+        <ul class="nav">
             <li *ngFor="let item of nav" (click)="openPath(item)">
                 {{item.name}}
             </li>
