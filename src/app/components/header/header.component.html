@@ -1,5 +1,5 @@
 <div class="header">
-    <div class="menu-btn" [ngClass]="{'bg-nav': logo}">
+    <div class="menu-btn" [ngClass]="{'bg-nav': count$ | async}">
         <span>ARY-TAN</span>
         <span class="menuToggle" (click)="openMenu()">菜单
             <i class="icon anticon anticon-menu-fold"></i>

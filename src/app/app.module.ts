@@ -10,6 +10,8 @@ import {HeaderComponent} from './components/header/header.component';
 import {HomeComponent} from './components/home/home.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {ServerComponent} from './components/server/server.component';
+import {StoreModule} from '@ngrx/store';
+import {counterReducer} from './ngrx/action/index';
 
 const appRoutes: Routes = [
     {
@@ -39,6 +41,7 @@ const appRoutes: Routes = [
             appRoutes,
             {enableTracing: true}
         ),
+        StoreModule.forRoot({count: counterReducer}),
         NgZorroAntdModule.forRoot()
     ],
     exports: [RouterModule],

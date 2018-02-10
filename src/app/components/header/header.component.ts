@@ -1,5 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {Store, select} from '@ngrx/store';
+import {Observable} from 'rxjs/observable';
+import {NAVGB} from '../../../app/ngrx/action/index';
+
+interface AppState {
+    count: boolean;
+}
 
 @Component({
     selector: 'app-header',
@@ -30,9 +37,10 @@ export class HeaderComponent implements OnInit {
         }
     ];
     navShow = false;
-    logo = true;
+    count$: Observable<boolean>;
 
-    constructor(private router: Router) {
+    constructor(private router: Router, private store: Store<AppState>) {
+        this.count$ = store.pipe(select('count'));
     }
 
     ngOnInit() {
