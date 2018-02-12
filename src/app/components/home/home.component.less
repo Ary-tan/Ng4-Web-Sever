@@ -1,3 +1,13 @@
+.bg-linear {
+    opacity: 1!important;
+    transition-delay: 2s;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../assets/banner.jpg") !important;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .banner-box {
     display: flex;
     flex-direction: column;
@@ -8,12 +18,8 @@
     overflow: hidden;
     position: relative;
     text-align: center;
-    background-image: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../assets/banner.jpg");
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     padding-top: 0;
+    opacity: 0;
     .banner {
         .inner {
             color: white;
@@ -149,18 +155,19 @@
         .major {
             margin-bottom: 60px;
             h2 {
-                font-size: 30px;
-                line-height: 30px;
+                font-size: 20px;
+                line-height: 35px;
                 color: white;
                 border-bottom: solid 2px #fff;
                 display: inline-block;
                 padding-bottom: 23px;
                 position: relative;
                 margin-bottom: 23px;
+                letter-spacing: 2px;
             }
             p {
                 color: #c7ebe8;
-                font-size: 20px;
+                font-size: 16px;
             }
         }
         .icons {
@@ -170,6 +177,10 @@
             justify-content: center;
             width: 396px;
             margin: 0 auto 34px auto;
+            .anticon {
+                transform: rotate(45deg)!important;
+                font-size: 25px;
+            }
             li {
                 width: 33.333333%;
                 span {

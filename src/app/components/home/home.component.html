@@ -1,4 +1,4 @@
-<div class="banner-box">
+<div class="banner-box" [ngClass]="{'bg-linear': admin}">
     <section class="banner">
         <div class="inner">
             <h2 [ngClass]="{'admin': admin}">ARYTAN-BLOG</h2>
@@ -7,7 +7,7 @@
                 <a href="https://github.com/Ary-tan" target="_blank">https://github.com/Ary-tan</a>.</p>
             <ul class="actions" [ngClass]="{'show': admin}">
                 <li>
-                    <button class="button special">Activate</button>
+                    <button class="button special">分享</button>
                 </li>
             </ul>
         </div>
@@ -20,20 +20,20 @@
 <section class="one">
     <div class="inner">
         <header class="major">
-            <h2>Arcu aliquet vel lobortis ata nisl<br/>
-                eget augue amet aliquet nisl cep donec</h2>
-            <p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br/>
-                fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+            <h2>我的服务器是用的阿里云服务器<br/>
+                关于部署网站和和购买域名流程有兴趣的可以咨询我哦~</h2>
+            <p>大致内容<br/>首先需要购买域名和服务器，购买流程阿里云上面有，消费还是很方便的，只要钱到位分分种你就可以拥有自己的域名和服务器~<br/>
+                域名需要备案，然后让服务器解析你的域名。当然服务器需要部署你的项目，我用的NODE+EXPRESS搭建的~</p>
         </header>
         <ul class="icons">
             <li>
-                <span class="label">Lorem</span>
+                <span class="label"><i style="color: #00ffcc" class="anticon anticon-line-chart"></i></span>
             </li>
             <li>
-                <span class="label">Ipsum</span>
+                <span class="label"><i style="color: #00f0ff" class="anticon anticon-star"></i></span>
             </li>
             <li>
-                <span class="label">Dolor</span>
+                <span class="label"><i style="color: #76ddff" class="anticon anticon-message"></i></span>
             </li>
         </ul>
     </div>
