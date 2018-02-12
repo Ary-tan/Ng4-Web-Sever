@@ -14,6 +14,7 @@ interface AppState {
 })
 export class HomeComponent implements OnInit {
     count$: Observable<boolean>;
+    admin = false;
 
     constructor(private store: Store<AppState>) {
         this.count$ = store.pipe(select('count'));
@@ -29,6 +30,12 @@ export class HomeComponent implements OnInit {
                 this.store.dispatch({type: NONAVGB});
             }
         });
+        let timeID = setTimeout(() => {
+            this.admin = true;
+        }, 300);
+        if (this.admin) {
+            clearTimeout(timeID);
+        }
     }
 
     scrollTop(dom) {

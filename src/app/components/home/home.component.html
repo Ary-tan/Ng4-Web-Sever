@@ -1,17 +1,17 @@
 <div class="banner-box">
     <section class="banner">
         <div class="inner">
-            <h2>ARYTAN-BLOG</h2>
-            <p>Another fine responsive<br/>
-                site template freebie<br/>
-                crafted by <a href="http://html5up.net">HTML5 UP</a>.</p>
-            <ul class="actions">
+            <h2 [ngClass]="{'admin': admin}">ARYTAN-BLOG</h2>
+            <p [ngClass]="{'show': admin}">关于技术栈<br/>
+                Angular5 node express<br/>
+                <a href="https://github.com/Ary-tan" target="_blank">https://github.com/Ary-tan</a>.</p>
+            <ul class="actions" [ngClass]="{'show': admin}">
                 <li>
                     <button class="button special">Activate</button>
                 </li>
             </ul>
         </div>
-        <span class="more scrolly" (click)="scrollTop($event)">
+        <span class="more scrolly" [ngClass]="{'show-more': admin}" (click)="scrollTop($event)">
             查看更多<br/>
             <i class="icon anticon anticon-arrow-down"></i>
         </span>

@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {Store, select} from '@ngrx/store';
 import {Observable} from 'rxjs/observable';
-import {NAVGB} from '../../../app/ngrx/action/index';
 
 interface AppState {
     count: boolean;

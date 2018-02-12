@@ -42,7 +42,7 @@
                     display: block;
                     height: 2px;
                     position: absolute;
-                    width: 100%;
+                    width: 0%;
                 }
                 &:after {
                     transition: width 0.85s ease;
@@ -52,36 +52,66 @@
                     display: block;
                     height: 2px;
                     position: absolute;
+                    right: 0;
+                    width: 0%;
+                }
+            }
+            .admin {
+                &:before {
+                    transition: width 0.85s ease;
+                    transition-delay: 0.25s;
+                    width: 100%;
+                }
+                &:after {
+                    transition: width 0.85s ease;
+                    transition-delay: 0.25s;
                     width: 100%;
                 }
             }
-            p {
-                font-size: 18px;
+            .show {
+                opacity: 1 !important;
+                transition-delay: 1s;
             }
-        }
-        .actions {
-            li {
-                button {
-                    width: 164px;
-                    height: 43px;
-                    background-color: #ed4933;
-                    box-shadow: none;
-                    color: #ffffff;
-                    border: none;
-                    border-radius: 4px;
-                    outline: none;
-                    cursor: pointer;
-                    &:hover {
-                        background-color: #ed6750;
-                        transition: all .2s linear;
+            p {
+                font-size: 14px;
+                line-height: 25px;
+                transition: all 0.85s ease;
+                opacity: 0;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                a {
+                    color: white !important;
+                }
+            }
+            .actions {
+                opacity: 0;
+                transition: all 0.85s ease;
+                li {
+                    button {
+                        width: 164px;
+                        height: 43px;
+                        background-color: #ed4933;
+                        box-shadow: none;
+                        color: #ffffff;
+                        border: none;
+                        border-radius: 4px;
+                        outline: none;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: #ed6750;
+                            transition: all .2s linear;
+                        }
                     }
                 }
             }
         }
+        .show-more {
+            transform: translateY(0) !important;
+        }
         .more {
             transition: transform 0.75s ease, opacity 0.75s ease;
-            transition-delay: 3.5s;
-            transform: translateY(0);
+            transition-delay: 2.5s;
+            transform: translateY(102px);
             border: none;
             bottom: 0;
             font-size: 12px;
@@ -327,4 +357,14 @@
             }
         }
     }
+}
+
+:host ::ng-deep .vertical-center-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:host ::ng-deep .vertical-center-modal .ant-modal {
+    top: 0;
 }
