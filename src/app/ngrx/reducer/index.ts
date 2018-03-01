@@ -6,7 +6,7 @@ export function counterReducer(state: stateManage = initialState, action: Action
     switch (action.type) {
         case Type.NAV:
             return Object.assign({}, state, {
-                nav: action.payload
+                nav: action.
             });
         default:
             return state;
