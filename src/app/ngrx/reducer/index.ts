@@ -5,7 +5,9 @@ import {stateManage, initialState} from '../model/index';
 export function counterReducer(state: stateManage = initialState, action: Action) {
     switch (action.type) {
         case Type.NAV:
-            return true;
+            return Object.assign({}, state, {
+                nav: action.payload
+            });
         default:
             return state;
     }
