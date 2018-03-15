@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Store, select} from '@ngrx/store';
 import {Observable} from 'rxjs/observable';
-import {NAVGB, NONAVGB} from '../../../app/ngrx/action/index';
+// import {NAVGB, NONAVGB} from '../../../app/ngrx/action/index';
 
 interface AppState {
     count: boolean;
@@ -25,9 +25,9 @@ export class HomeComponent implements OnInit {
             let height = document.documentElement.clientHeight;
             let top = document.documentElement.scrollTop;
             if (top > height) {
-                this.store.dispatch({type: NAVGB});
+                // this.store.dispatch({type: NAVGB});
             } else {
-                this.store.dispatch({type: NONAVGB});
+                // this.store.dispatch({type: NONAVGB});
             }
         });
         let timeID = setTimeout(() => {
@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
             let top = document.documentElement.scrollTop;
             if (top > height) {
                 clearInterval(timeID);
-                this.store.dispatch({type: NAVGB});
+                // this.store.dispatch({type: NAVGB});
                 return;
             }
             if (top < height) {

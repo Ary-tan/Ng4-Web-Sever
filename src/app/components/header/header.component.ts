@@ -32,7 +32,7 @@ export class HeaderComponent implements OnInit {
         },
         {
             path: '',
-            name: '技术论坛'
+            name: '技术交流'
         }
     ];
     count$: Observable<boolean>;
