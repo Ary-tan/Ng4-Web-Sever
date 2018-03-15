@@ -2,9 +2,17 @@
     <section class="footer-box">
         <section class="footer-content">
             <p><a class="href" href="https://github.com/Ary-tan" target="_blank">https://github.com/Ary-tan</a></p>
+            <p class="time">{{time}}</p>
         </section>
         <section class="footer-content">
-            ag
+            <nav class="footer-nav">
+                <ul class="nav">
+                    <li *ngFor="let item of nav" (click)="openPath(item)">
+                        {{item.name}}
+                    </li>
+                </ul>
+            </nav>
+            <p style="text-align: right"><a class="href" href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备18004969号</a></p>
         </section>
     </section>
 </footer>

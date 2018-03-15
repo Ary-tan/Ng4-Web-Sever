@@ -20,19 +20,19 @@ export class HeaderComponent implements OnInit {
         },
         {
             path: 'server',
-            name: '服务'
+            name: 'HTML/CSS'
         },
         {
             path: '',
-            name: '项目'
+            name: 'JAVASCRIPT'
         },
         {
             path: '',
-            name: '关于'
+            name: 'NODE/EXPRESS'
         },
         {
             path: '',
-            name: '配置说明'
+            name: '技术论坛'
         }
     ];
     count$: Observable<boolean>;
