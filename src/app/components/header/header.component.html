@@ -8,9 +8,8 @@
                 </li>
             </ul>
         </nav>
-        <span class="menuToggle" (click)="openMenu()">菜单
-            <i class="icon anticon anticon-menu-fold"></i>
+        <span class="menuToggle">登录 | 注册
+            <nz-input [nzSize]="'large'" [nzType]="'search'" [nzPlaceHolder]="'请输入搜索内容'" [(ngModel)]="_value" style="width: 200px;" (nzOnSearch)="onSearch($event)"></nz-input>
         </span>
     </div>
-    <section class="shade" *ngIf="navShow" (click)="closeShade()"></section>
 </div>

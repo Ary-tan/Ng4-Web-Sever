@@ -47,4 +47,8 @@ export class HeaderComponent implements OnInit {
     openPath(nav) {
         this.router.navigate([nav.path]);
     }
+
+    onSearch(event: string): void {
+        console.log(event);
+    }
 }
