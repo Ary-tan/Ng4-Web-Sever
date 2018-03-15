@@ -35,7 +35,6 @@ export class HeaderComponent implements OnInit {
             name: '配置说明'
         }
     ];
-    navShow = false;
     count$: Observable<boolean>;
 
     constructor(private router: Router, private store: Store<AppState>) {
@@ -47,18 +46,5 @@ export class HeaderComponent implements OnInit {
 
     openPath(nav) {
         this.router.navigate([nav.path]);
-        this.navShow = false;
-    }
-
-    openMenu() {
-        this.navShow = true;
-    }
-
-    closeMenu() {
-        this.navShow = false;
-    }
-
-    closeShade() {
-        this.navShow = false;
     }
 }
