@@ -70,6 +70,11 @@
                 color: #7b7b7b;
                 font-size: 16px;
                 padding-bottom: 10px;
+                cursor: pointer;
+                &:hover {
+                    color: #555;
+                    transition: all .3s ease-in;
+                }
             }
             .section {
                 color: #999;
@@ -78,7 +83,24 @@
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 2;
+                line-height: 1.6;
+                > span {
+                    color: #009e73;
+                }
             }
         }
+        .main {
+            width: 70%;
+        }
+        .count {
+            width: 5%;
+            text-align: center;
+        }
+        .comment {
+            width: 25%;
+        }
+    }
+    .article {
+        margin-bottom: 15px;
     }
 }
