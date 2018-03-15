@@ -13,6 +13,7 @@ interface AppState {
     styleUrls: ['./header.component.less']
 })
 export class HeaderComponent implements OnInit {
+    value: any;
     nav = [
         {
             path: '',
